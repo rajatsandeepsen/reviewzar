@@ -311,7 +311,6 @@ main h1, main p {
 
 .product {
   border-radius: 13px;
-  max-height: 500px;
 }
 .product h2, .product h4 {
   padding: 0;
@@ -319,14 +318,10 @@ main h1, main p {
 }
 .product img {
   border-radius: 13px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 .product .scrollable {
   direction: rtl;
-  overflow-y: auto;
   padding-left: 10px;
-  padding-bottom: 0;
 }
 .product .scrollable::-webkit-scrollbar {
   width: 10px;
@@ -348,4 +343,33 @@ main h1, main p {
   border: solid 1px var(--grey);
   padding: 8px;
   direction: ltr;
+}
+
+@media (max-width: 767px) {
+  .product {
+    max-height: 550px;
+  }
+  .product img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 200px;
+  }
+  .product .scrollable {
+    overflow-y: scroll;
+    height: 200px;
+  }
+}
+@media (min-width: 768px) {
+  .product {
+    height: 550px;
+  }
+  .product img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    min-width: 300px;
+  }
+  .product .scrollable {
+    overflow-y: scroll;
+  }
 }/*# sourceMappingURL=style.css.map */
