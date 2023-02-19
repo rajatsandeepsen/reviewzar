@@ -10,6 +10,3 @@ searchbar.addEventListener('submit', e => {
         item1.style.display = 'flex'
     }, 1000);
 })
-
-const array = document.getElementsByClassName('navA')
-console.log(array)
